@@ -1,0 +1,33 @@
+<div class="row align-center" style="padding-left: 15px;padding-bottom: 15px;">
+    <div class="column align-center text-center">
+        <h3 style="color: #623073;">Provide Access to Associates</h3>
+    </div>
+</div>
+
+<div class="row align-center" style="padding-left: 15px;padding-bottom: 15px;">
+
+    <div class="col-md-6 col-sm-8 pt-4 badge badge-outline-dark text-left pl-3">
+        <label for="associateId">Associate Id </label>
+        <div class="input-group">
+            <input type="text" id="associateId" [(ngModel)]="associateId">
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-8 pt-4 badge badge-outline-dark text-left pl-3">
+        <label>Access level </label>
+        <div class="input-group">
+            <select id="accessLevel" [(ngModel)]="selectedAccessLevel">
+                <option value="" disabled selected >Select access level</option>
+                <option *ngFor="let level of accessLevel" value={{level}}>
+                    {{level}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 pt-4" style="text-align: center;">
+            <button name="provideAccess" type="submit" value="provideAccess" class="btn btn-secondary"
+                style="margin-left:15px;" (click)="giveAccess()">Provide Access</button>
+        </div>
+    </div>
+
+</div>
